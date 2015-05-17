@@ -30,7 +30,7 @@ class PseudoCalculator{
         
         int operandArray[] = new int[numberOfToken];
         
-        state = transformTokenizedStringToInteger(tokenArray,operandArray,tokenizedString,numberOfToken);
+        state = transformTokenToInteger(tokenArray,operandArray,tokenizedString,numberOfToken);
         if(!state)
            continue;
         
