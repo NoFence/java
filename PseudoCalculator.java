@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.StringTokenizer;
  
-class test{
+class PseudoCalculator{
         
     public static void main(String args[]) {
         String expression;
@@ -55,7 +55,7 @@ class test{
         System.out.println(result);
     }
     
-    public static boolean transformTokenizedStringToInteger(String tokenArray[], int operandArray[],StringTokenizer tokenizedString,int numberOfToken){
+    public static boolean transformTokenToInteger(String tokenArray[], int operandArray[],StringTokenizer tokenizedString,int numberOfToken){
         int i;
         boolean state = true;
         
