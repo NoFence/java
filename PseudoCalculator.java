@@ -20,7 +20,7 @@ class PseudoCalculator{
         // Define variable about string to be tokenized
         // Define delimeter with "+,*,/,-"
         StringTokenizer tokenizedString = new StringTokenizer(expression,"+-*/",true);
-        StringTokenizer checkTokenizedString = tokenizedString;
+        
         
         // Define number of tokenized string
         int numberOfToken = tokenizedString.countTokens();
