@@ -6,23 +6,18 @@ class PseudoCalculator{
     public static void main(String args[]) {
         String expression;
         int result;
-        int i;  // Even column
-        int j; // Odd column
+        int i;  
+        int j;
         boolean state;
         
         while(true){
             
-         j=1;  // loop variable
-        
-         
+         j=1; 
+          
         expression = inputExpression();
         
-        // Define variable about string to be tokenized
-        // Define delimeter with "+,*,/,-"
+       
         StringTokenizer tokenizedString = new StringTokenizer(expression,"+-*/",true);
-        
-        
-        // Define number of tokenized string
         int numberOfToken = tokenizedString.countTokens();
         
         String tokenArray[];
@@ -45,7 +40,7 @@ class PseudoCalculator{
         String expression;
         Scanner sc = new Scanner(System.in);        
        
-        System.out.println("input the expression => ");
+        System.out.println("수식을 입력해 주세욧 => ");
         expression = sc.next();
         
         return expression;
@@ -53,6 +48,7 @@ class PseudoCalculator{
     
     public static void outputExpression(int result){
         System.out.println(result);
+        System.out.println();
     }
     
     public static boolean transformTokenToInteger(String tokenArray[], int operandArray[],StringTokenizer tokenizedString,int numberOfToken){
@@ -68,8 +64,9 @@ class PseudoCalculator{
             } 
          catch (Exception e) {
                 if ( !("*".equals(tokenArray[i]) || "/".equals(tokenArray[i]) || "-".equals(tokenArray[i]) || "+".equals(tokenArray[i])  )  ) {
-                    System.out.println("Please input right value,sir!");
-                    System.out.println("Any character exepet operators and digits coudn't be input.");
+                    System.out.println("올바른 값을 입력해 주세욧!");
+                    System.out.println("연산자와 숫자를 제외한 문자는 입력 될 수 없습니다.");
+                    System.out.println();
                     state = false;
                     break;
                            
@@ -77,8 +74,9 @@ class PseudoCalculator{
                 
                 if ( (i%2) == 0 ){
                         if ("+".equals(tokenArray[i]) || "*".equals(tokenArray[i]) || "-".equals(tokenArray[i]) || "/".equals(tokenArray[i])){
-                                System.out.println("Please input right value,sir!");
-                                System.out.println("Operators coudn't be input in rows");
+                                System.out.println("올바른 값을 입력해 주세욧!");
+                                System.out.println("연산자는 연속으로 두 개 이상 입력 될 수 없습니다.");
+                                System.out.println();
                                 state = false;
                                 break;
                 }
@@ -121,8 +119,9 @@ class PseudoCalculator{
                             result /= operandArray[i];
                     } 
                     catch (Exception e) {
-                            System.out.println("divide by zero can't be operated!");
-                            System.out.println("Please input right value.");
+                            System.out.println("올바른 값을 입력해 주세욧!");
+                            System.out.println("값을 0으로 나눌 수 없습니다.");
+                            System.out.println();
                             result =0;
                             break;
                     }
