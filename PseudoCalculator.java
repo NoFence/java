@@ -4,11 +4,11 @@ import java.util.StringTokenizer;
 class PseudoCalculator{
         
     public static void main(String args[]) {
-        String expression;
-        int result;
-        int i;  
-        int j;
-        boolean state;
+        String expression; // 수식을 담기 위한 문자열 변수
+        int result; // 결과 값을 반환하기 위한 변수
+        int i;  // 홀수 열에 담긴 배열 값 처리를 위한 반복 제어 변수
+        int j; // 짝수 열에 담긴 배열 값 처리를 위한 반복 제어 변수
+        boolean state;  // 상태 정보를 반환하기 위해 처리 되는 플래그 변수
         
         while(true){
             
